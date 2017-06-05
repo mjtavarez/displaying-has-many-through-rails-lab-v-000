@@ -1,0 +1,15 @@
+<h1>Flatiron Hospital's Doctors</h1>
+<table>
+    <thead>
+        <th>Name</th>
+        <th># Patients</th>
+    </thead>
+    <% @doctors.each do |doctor| %>
+    <tbody>
+        <tr>
+            <td><%=link_to doctor.name, doctor_path(doctor)%></td>
+            <td><%= doctor.patients.size %></td>
+        </tr>
+    <% end %>
+    </tbody>
+</table>
